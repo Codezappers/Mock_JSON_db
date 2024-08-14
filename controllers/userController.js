@@ -1,24 +1,7 @@
 const fs = require('fs').promises;
-const filePath  = ('../database.json');
-
-async function readData() {
-    try{
-        const data = await fs.readFile( filePath, 'utf8');
-        return JSON.parse(data);
-
-    }catch (error){
-        console.log(error);
-    }
-}
-
-async function writeData(data) {
-    try{
-        const data = await fs.writeFile( filePath, JSON.stringify(data,null,2));
-
-    }catch (error){
-        console.log(error);
-    }
-}
+const filePath  = ('./database.json');
+const { read } = require('fs');
+const {readData, writeData} = require('../utils/file');
 
 //route handler controller
 async function createUser(req, res) {
@@ -44,14 +27,29 @@ async function createUser(req, res) {
     }
 }
 
+//function for updating user
+
+async function updateUser(req, res) {
+    try{
+        const data = readData();
+        const user = data.users.find(user => user.id === parseInt(req.params.id));
+
+        if(user){
+            user.username = req.body.username|| user.username;
+            user.first_name = req.body.first_name|| user.first_name;
+            user.email = req.body.email|| user.email;
+
+            await writeData(data);
+        }else {
+            res.status(404).send('User not found');
+        }
+
+    }catch (error){
+        console.log(error);
+    }
+
 module.exports = {
-    createUser,
-    
+    createUser, 
+    updateUser,  
 }
-
-
-
-
-
-
-
+}

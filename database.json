@@ -1,26 +1,28 @@
 {
-    "users": [
-        {
-            "id": 0,
-            "username": "user1",
-            "first_name": "John",
-            "email": "john@yahoo.com"
-        
-        },
-
-        {
-            "id": 1,
-            "username": "user2",
-            "first_name": "Jane",
-            "email": "jane@gmail.com"
-        },
-
-        {
-            "id": 2,
-            "username": "user3",
-            "first_name": "Doe",
-            "email": "doe@icloud.com"
-        }
-    
-    ]
+  "users": [
+    {
+      "id": 0,
+      "username": "user1",
+      "first_name": "John",
+      "email": "john@yahoo.com"
+    },
+    {
+      "id": 1,
+      "username": "user2",
+      "first_name": "Jane",
+      "email": "jane@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "user3",
+      "first_name": "Doe",
+      "email": "doe@icloud.com"
+    },
+    {
+      "id": 3,
+      "username": "Cheetoman",
+      "first_name": "Matrix",
+      "email": "Ops@gmail.com"
+    }
+  ]
 }
