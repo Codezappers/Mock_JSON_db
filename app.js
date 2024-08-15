@@ -1,22 +1,20 @@
 const express = require('express');
-const router = require('./routes/users');
-require ('dotenv').config();
-const ejs = require('ejs');
+const userRoute = require('./routes/users.js');
+const mongoose = require('mongoose');
 
+const ejs = require('ejs');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const userRoute = require('./routes/users');
-
-app.use(router);
-
-app.set ('view engine', 'ejs');
-app.set ('views', './views');
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 app.use(express.static('public'));
 app.use(userRoute);
 
+
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+   console.log(`Connected on port ${PORT}`);
 });

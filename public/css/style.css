@@ -1,5 +1,6 @@
 body{
     background: linear-gradient(to left, blue, lightblue);
+
 }
 
 form{
@@ -14,6 +15,7 @@ form{
     backdrop-filter: blur(5px);
 }
 
+
 #addUserForm{
     display: inline-block;
     text-align: left;
@@ -24,7 +26,6 @@ form{
     border-radius:5px;
     box-shadow: 0 0 5px rgba(225, 225, 225, .15);
     backdrop-filter: blur(5px);
- 
 }
 
 #formContainer{

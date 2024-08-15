@@ -7,22 +7,16 @@
       "email": "john@yahoo.com"
     },
     {
-      "id": 1,
-      "username": "user2",
-      "first_name": "Jane",
-      "email": "jane@gmail.com"
-    },
-    {
       "id": 2,
-      "username": "user3",
-      "first_name": "Doe",
-      "email": "doe@icloud.com"
+      "username": "Cheetoman",
+      "first_name": "Cheezy",
+      "email": "Chowder@gmail.com"
     },
     {
       "id": 3,
-      "username": "Cheetoman",
-      "first_name": "Matrix",
-      "email": "Ops@gmail.com"
+      "username": "Machoman",
+      "first_name": "Jamerson",
+      "email": "Goju@icloud.com"
     }
   ]
 }
